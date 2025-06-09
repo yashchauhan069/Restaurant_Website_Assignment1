@@ -4,4 +4,4 @@
 - Content theme: Restaurant
 - Member: Yash Ajay Chauhan (U48528636)
 
-- Farmaish - The Vegetarian Kitchen
+- Farmaish Restaurant - The Vegetarian Kitchen
