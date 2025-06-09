@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Management - Farmaish Restaurant</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Farmaish Logo" class="logo-img">
+                <span>FARMAISH</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="aboutus.html" class="nav-link">About Us</a></li>
+                <li><a href="menu-management.html" class="nav-link active">Menu Management</a></li>
+                <li><a href="analytics.html" class="nav-link">Analytics</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Add New Menu Item</h2>
+                <div class="form-container">
+                    <form id="menuForm">
+                        <div class="form-group">
+                            <label for="itemName">Item Name:</label>
+                            <input type="text" id="itemName" name="itemName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category:</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="Salads & Bowls">Salads & Bowls</option>
+                                <option value="Soups">Soups</option>
+                                <option value="Main Course">Main Course</option>
+                                <option value="Snacks & Appetizers">Snacks & Appetizers</option>
+                                <option value="Desserts">Desserts</option>
+                                <option value="Beverages">Beverages</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Price ($):</label>
+                            <input type="number" id="price" name="price" step="0.01" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description:</label>
+                            <textarea id="description" name="description" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="availability">Availability:</label>
+                            <select id="availability" name="availability" required>
+                                <option value="Available">Available</option>
+                                <option value="Limited">Limited</option>
+                                <option value="Sold Out">Sold Out</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn" id="submitBtn">Add Menu Item</button>
+                        <button type="button" class="btn btn-secondary" id="cancelBtn" style="display: none;">Cancel Edit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Current Menu Items</h2>
+                <div class="table-container">
+                    <table id="menuTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Description</th>
+                                <th>Availability</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="menuTableBody"></tbody>
+                    </table>
+                </div>
+                <div id="noItemsMessage" style="text-align: center; padding: 2rem; color: #666; display: none;">
+                    <h3>No menu items found</h3>
+                    <p>Add some menu items using the form above.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Farmaish Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
